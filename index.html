@@ -7,11 +7,6 @@
     <meta name="description" content="Curriculum vitae interactivo de Patricia Martín, cocinera profesional con 20 años de experiencia en cocina fría y caliente, producción y liderazgo de equipos." />
     <meta name="author" content="Patricia Martín" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Patricia Martín · CV Interactivo" />
-    <meta property="og:description" content="Cocinera profesional con 20 años de trayectoria. Especialista en cocina fría y caliente, producción y conducción de cocina." />
-    <meta property="og:type" content="website" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,19 +22,14 @@
         :root {
             --primary: #1a2e2a;
             --primary-dark: #0f1f1c;
-            --primary-light: #2a4a42;
             --accent: #b8863a;
             --accent-light: #d4a85a;
             --accent-pale: #f5ede3;
             --white: #ffffff;
             --off-white: #faf8f5;
-            --gray-100: #f0ede8;
             --gray-200: #e0dbd4;
-            --gray-400: #b5ada4;
             --gray-600: #7a7268;
             --gray-800: #3d3732;
-            --dark: #1e1a16;
-            --shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
             --shadow-hover: 0 16px 50px rgba(0, 0, 0, 0.1);
             --radius: 14px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -218,9 +208,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background:
-                linear-gradient(135deg, rgba(15, 31, 28, 0.94) 0%, rgba(26, 46, 42, 0.85) 60%, rgba(15, 31, 28, 0.95) 100%),
-                var(--primary-dark);
+            background: var(--primary-dark);
             color: var(--white);
             padding-top: 68px;
             position: relative;
@@ -230,7 +218,7 @@
         .header::before {
             content: '👩‍🍳';
             position: absolute;
-            font-size: 300px;
+            font-size: 280px;
             right: -60px;
             bottom: -80px;
             opacity: 0.04;
@@ -247,8 +235,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(184, 134, 58, 0.12);
-            border: 1px solid rgba(184, 134, 58, 0.2);
+            background: rgba(184, 134, 58, 0.15);
+            border: 1px solid rgba(184, 134, 58, 0.25);
             padding: 6px 18px 6px 14px;
             border-radius: 60px;
             font-size: 11px;
@@ -275,7 +263,7 @@
 
         .header .subtitle {
             font-size: clamp(16px, 1.2vw, 20px);
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(255, 255, 255, 0.80);
             max-width: 540px;
             margin-bottom: 28px;
         }
@@ -336,6 +324,7 @@
             margin-top: 36px;
             padding-top: 28px;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
+            flex-wrap: wrap;
         }
 
         .header-contact a {
@@ -393,23 +382,6 @@
             line-height: 1.8;
         }
 
-        .about-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .about-tag {
-            background: var(--accent-pale);
-            color: var(--primary-dark);
-            padding: 4px 16px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* Sidebar info */
         .about-sidebar {
             background: var(--off-white);
             border-radius: var(--radius);
@@ -546,6 +518,38 @@
         }
 
         /* ============================================
+                   PUESTOS DE INTERÉS
+                ============================================ */
+        .positions {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .positions-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .positions-grid .tag {
+            background: var(--accent-pale);
+            color: var(--primary-dark);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .positions-grid .tag:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
                    SKILLS
                 ============================================ */
         .skills {
@@ -586,55 +590,6 @@
             font-size: 14px;
             font-weight: 500;
             color: var(--primary-dark);
-        }
-
-        /* ============================================
-                   EDUCATION
-                ============================================ */
-        .education {
-            padding: 80px 0;
-            background: var(--off-white);
-        }
-
-        .edu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 32px;
-        }
-
-        .edu-card {
-            background: var(--white);
-            padding: 28px 30px;
-            border-radius: var(--radius);
-            border: 1px solid var(--gray-200);
-            transition: var(--transition);
-        }
-
-        .edu-card:hover {
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
-
-        .edu-card .year {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .edu-card h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            color: var(--primary-dark);
-            margin: 4px 0 2px;
-        }
-
-        .edu-card .institution {
-            font-size: 13px;
-            color: var(--gray-600);
-            font-weight: 500;
         }
 
         /* ============================================
@@ -747,14 +702,6 @@
                 gap: 32px;
             }
 
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .edu-grid {
-                grid-template-columns: 1fr;
-            }
-
             .contact-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -798,10 +745,6 @@
             }
 
             .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -868,8 +811,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#puestos">Puestos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#formacion">Formación</a></li>
                 <li><a href="#contacto" class="nav-cta">Contacto</a></li>
             </ul>
         </div>
@@ -883,7 +826,7 @@
             <div class="header-content reveal">
                 <div class="header-badge">
                     <i class="fas fa-utensil-spoon"></i>
-                    Cocinera Profesional · 20 años de trayectoria
+                    Profesional gastronómica · 20 años de trayectoria
                 </div>
 
                 <h1>
@@ -891,8 +834,8 @@
                 </h1>
 
                 <p class="subtitle">
-                    Especialista en cocina fría y caliente, producción, liderazgo de equipos,
-                    catering y eventos. Apasionada por la gastronomía y la excelencia en el servicio.
+                    Profesional gastronómica con 20 años de trayectoria y experiencia
+                    en conducción / encargada de sectores.
                 </p>
 
                 <div class="header-buttons">
@@ -914,8 +857,11 @@
                     <a href="tel:+5491160574170">
                         <i class="fas fa-phone"></i> +54 9 11 6057-4170
                     </a>
+                    <a href="tel:+5491137662825">
+                        <i class="fas fa-phone"></i> +54 9 11 3766-2825
+                    </a>
                     <a href="#">
-                        <i class="fas fa-map-marker-alt"></i> Belén de Escobar, Buenos Aires
+                        <i class="fas fa-map-marker-alt"></i> Belén de Escobar
                     </a>
                 </div>
             </div>
@@ -933,30 +879,22 @@
                     <h2>Experiencia, <span>organización</span> y pasión</h2>
 
                     <p>
-                        Cocinera con sólida experiencia en cocina fría y caliente,
-                        manejo eficiente de stock, liderazgo de equipos y cumplimiento
-                        estricto de normas de higiene y seguridad alimentaria.
+                        Cocinera con sólida experiencia en cocina fría y caliente.
+                        Manejo eficiente de stock, liderazgo de equipos y cumplimiento
+                        de normas de higiene y seguridad alimentaria.
                     </p>
 
                     <p>
-                        Participé en eventos gastronómicos de distintas escalas y
-                        jornadas prolongadas, siempre destacando por el compromiso,
-                        la organización y la pasión por la gastronomía.
+                        Participación en eventos gastronómicos de distintas escalas y
+                        jornadas prolongadas. Destaco por mi compromiso, organización
+                        y pasión por la gastronomía.
                     </p>
 
                     <p>
-                        Mi objetivo es seguir capacitándome, incorporando nuevas
-                        técnicas y estilos de cocina, para brindar un servicio de excelencia.
+                        Mi objetivo es continuar capacitándome y ampliando mis habilidades
+                        culinarias, incorporando nuevas técnicas y estilos de cocina para
+                        brindar un servicio de excelencia.
                     </p>
-
-                    <div class="about-tags">
-                        <span class="about-tag">Encargada de cocina</span>
-                        <span class="about-tag">Producción</span>
-                        <span class="about-tag">Liderazgo</span>
-                        <span class="about-tag">Catering</span>
-                        <span class="about-tag">Eventos</span>
-                        <span class="about-tag">Hoteles</span>
-                    </div>
                 </div>
 
                 <div class="about-sidebar reveal">
@@ -976,19 +914,19 @@
                     </div>
                     <div class="info-row">
                         <span class="label">Ubicación</span>
-                        <span class="value">Belén de Escobar, BA</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">Disponibilidad</span>
-                        <span class="value">Inmediata</span>
+                        <span class="value">Belén de Escobar</span>
                     </div>
                     <div class="info-row">
                         <span class="label">Email</span>
                         <span class="value" style="font-size:12px;">patricia125369@gmail.com</span>
                     </div>
-                    <div class="info-row" style="border-bottom: none;">
-                        <span class="label">Teléfono</span>
+                    <div class="info-row">
+                        <span class="label">Teléfono 1</span>
                         <span class="value">+54 9 11 6057-4170</span>
+                    </div>
+                    <div class="info-row" style="border-bottom: none;">
+                        <span class="label">Teléfono 2</span>
+                        <span class="value">+54 9 11 3766-2825</span>
                     </div>
                 </div>
             </div>
@@ -1002,15 +940,12 @@
         <div class="container">
             <div class="text-center reveal">
                 <span class="section-badge">Trayectoria</span>
-                <h2 class="section-title">Experiencia <span>profesional</span></h2>
-                <p class="section-subtitle mx-auto" style="max-width:580px;">
-                    Una carrera construida en cocinas profesionales, catering, hoteles y eventos de distintas escalas.
-                </p>
+                <h2 class="section-title">Experiencia <span>laboral</span></h2>
             </div>
 
             <div class="experience-timeline">
 
-                <!-- Item 1 -->
+                <!-- Avant Catering -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Cocinera encargada</h3>
@@ -1020,11 +955,12 @@
                     <ul>
                         <li>Cálculo de cantidades según tipo de evento o servicio.</li>
                         <li>Porcionado estandarizado para control de costos.</li>
-                        <li>Clasificación y almacenamiento por tipo de producto.</li>
+                        <li>Clasificación y almacenamiento según tipo de producto (cárnico, lácteo, vegetales, secos).</li>
+                        <li>Detección temprana de productos no aptos o fuera de norma.</li>
                     </ul>
                 </div>
 
-                <!-- Item 2 -->
+                <!-- Art Catering -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Cocinera</h3>
@@ -1033,12 +969,12 @@
                     <div class="exp-company">Art Catering</div>
                     <ul>
                         <li>Preparación de grandes volúmenes sin perder calidad ni presentación.</li>
-                        <li>Planificación de producción por etapas.</li>
-                        <li>Organización de estaciones de trabajo para despacho ágil.</li>
+                        <li>Planificación de producción por etapas (preproducción, cocción, montaje, reposición).</li>
+                        <li>Preparación de estaciones de trabajo para despacho ágil en horas pico.</li>
                     </ul>
                 </div>
 
-                <!-- Item 3 -->
+                <!-- Nomade Resto -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Cocinera</h3>
@@ -1046,27 +982,41 @@
                     </div>
                     <div class="exp-company">Nomade Resto · Campo Argentino de Polo</div>
                     <ul>
-                        <li>Control preciso de puntos de cocción de carnes, pescados y pastas.</li>
-                        <li>Cortes profesionales: brunoise, juliana, mirepoix, chiffonade.</li>
-                        <li>Elaboración de fondos, reducciones, glaseados y salsas madre.</li>
+                        <li>Control preciso de puntos de cocción (carnes, pescados, pastas y vegetales).</li>
+                        <li>Manejo de cortes profesionales: brunoise, juliana, mirepoix, chiffonade, fileteado, deshuesado básico.</li>
+                        <li>Elaboración de reducciones, fondos, glaseados, emulsiones y salsas madre con sus derivadas.</li>
                     </ul>
                 </div>
 
-                <!-- Item 4 -->
+                <!-- Barrios cerrados -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Cocinera</h3>
                         <span class="exp-date">2022 · 2023</span>
                     </div>
-                    <div class="exp-company">Barrios cerrados · Haras Santa María y Miraflores</div>
+                    <div class="exp-company">Barrios cerrados "Haras Santa María" y "Miraflores"</div>
                     <ul>
-                        <li>Corte, picado, fileteado y porcionado de carnes y verduras.</li>
-                        <li>Preparación de masas, rellenos, mezclas y bases.</li>
+                        <li>Corte, picado, fileteado y porcionado de carnes, verduras y pescados.</li>
+                        <li>Preparación de masas, rellenos, mezclas y bases para cocciones posteriores.</li>
                         <li>Porcionado y etiquetado de productos para producción futura.</li>
                     </ul>
                 </div>
 
-                <!-- Item 5 -->
+                <!-- Club House -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera</h3>
+                        <span class="exp-date">2021 · 2022</span>
+                    </div>
+                    <div class="exp-company">Club House · Barrio cerrado</div>
+                    <ul>
+                        <li>Elaborar platos de cocina fría y caliente siguiendo recetas y estándares establecidos.</li>
+                        <li>Realizar mise en place diaria, control de porciones y tiempos de cocción.</li>
+                        <li>Asegurar sabor, calidad y presentación en cada preparación.</li>
+                    </ul>
+                </div>
+
+                <!-- Chips Café -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Cocinera encargada</h3>
@@ -1074,13 +1024,27 @@
                     </div>
                     <div class="exp-company">Chips Café / Café Boccazzi</div>
                     <ul>
-                        <li>Asignación de tareas al personal de cocina.</li>
-                        <li>Capacitación del equipo en técnicas, recetas y normas de higiene.</li>
-                        <li>Supervisión del ritmo de trabajo para cumplir horarios de servicio.</li>
+                        <li>Asignar tareas al personal de cocina y acompañar su desempeño.</li>
+                        <li>Capacitar al equipo en técnicas, recetas y normas de higiene.</li>
+                        <li>Supervisar el ritmo de trabajo para cumplir horarios de servicio.</li>
                     </ul>
                 </div>
 
-                <!-- Item 6 -->
+                <!-- Torres Mirabilia -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera encargada</h3>
+                        <span class="exp-date">2013 · 2015</span>
+                    </div>
+                    <div class="exp-company">Torres Mirabilia · Restaurante Joy</div>
+                    <ul>
+                        <li>Planificar y coordinar la producción diaria según menú o tipo de servicio.</li>
+                        <li>Elaborar preparaciones de cocina fría y caliente manteniendo calidad, sabor y presentación.</li>
+                        <li>Supervisar porciones, tiempos de cocción y estándares establecidos.</li>
+                    </ul>
+                </div>
+
+                <!-- Eat Catering -->
                 <div class="exp-item reveal">
                     <div class="exp-header">
                         <h3>Jefa de sector cóctel frío y degustación</h3>
@@ -1088,11 +1052,34 @@
                     </div>
                     <div class="exp-company">Eat Catering</div>
                     <ul>
-                        <li>Elaboración y supervisión de canapés, bocaditos fríos, tablas y degustaciones.</li>
-                        <li>Verificación del cumplimiento de recetas y estándares de la empresa.</li>
+                        <li>Elaboración y supervisión de canapés, bocaditos fríos, tablas, degustaciones y presentaciones gastronómicas.</li>
+                        <li>Verificación del cumplimiento de recetas, porciones y estándares de la empresa.</li>
                     </ul>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+    PUESTOS DE INTERÉS
+    ========================================== -->
+    <section class="positions" id="puestos">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-badge">Puestos</span>
+                <h2 class="section-title">Puestos de <span>interés</span></h2>
+            </div>
+
+            <div class="positions-grid">
+                <span class="tag">Encargada de cocina</span>
+                <span class="tag">Encargada de producción</span>
+                <span class="tag">Supervisora de cocina</span>
+                <span class="tag">Jefa de partida</span>
+                <span class="tag">Cocinera especializada</span>
+                <span class="tag">Responsable de turno</span>
+                <span class="tag">Supervisora gastronómica</span>
+                <span class="tag">Producción para hoteles / eventos / catering</span>
             </div>
         </div>
     </section>
@@ -1105,9 +1092,6 @@
             <div class="text-center reveal">
                 <span class="section-badge">Competencias</span>
                 <h2 class="section-title">Habilidades <span>profesionales</span></h2>
-                <p class="section-subtitle mx-auto" style="max-width:560px;">
-                    Competencias desarrolladas a lo largo de dos décadas en cocinas profesionales.
-                </p>
             </div>
 
             <div class="skills-grid">
@@ -1130,63 +1114,6 @@
                 <div class="skill-item reveal">
                     <i class="fas fa-check-circle"></i>
                     <span>Liderazgo y coordinación de equipos</span>
-                </div>
-                <div class="skill-item reveal">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Higiene y seguridad alimentaria</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-    EDUCATION
-    ========================================== -->
-    <section class="education" id="formacion">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-badge">Formación</span>
-                <h2 class="section-title">Capacitación <span>profesional</span></h2>
-                <p class="section-subtitle mx-auto" style="max-width:500px;">
-                    Formación continua para mantenerse actualizada en técnicas y tendencias gastronómicas.
-                </p>
-            </div>
-
-            <div class="edu-grid">
-                <div class="edu-card reveal">
-                    <div class="year">2020</div>
-                    <h4>Curso de Cocina de Vanguardia</h4>
-                    <div class="institution">Instituto Gastronómico Argentino</div>
-                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
-                        Técnicas avanzadas de cocina y presentación.
-                    </p>
-                </div>
-
-                <div class="edu-card reveal">
-                    <div class="year">2015</div>
-                    <h4>Gestión de Equipos en Cocina</h4>
-                    <div class="institution">Centro de Formación Profesional</div>
-                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
-                        Liderazgo, comunicación y organización en cocinas profesionales.
-                    </p>
-                </div>
-
-                <div class="edu-card reveal">
-                    <div class="year">2010</div>
-                    <h4>Curso de Manipulación de Alimentos</h4>
-                    <div class="institution">Instituto de Seguridad Alimentaria</div>
-                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
-                        Normas de higiene y seguridad alimentaria.
-                    </p>
-                </div>
-
-                <div class="edu-card reveal">
-                    <div class="year">2005</div>
-                    <h4>Cocinera Profesional</h4>
-                    <div class="institution">Escuela de Gastronomía Gato Dumas</div>
-                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
-                        Formación integral en cocina profesional.
-                    </p>
                 </div>
             </div>
         </div>
@@ -1214,14 +1141,14 @@
 
                 <div class="contact-card reveal">
                     <i class="fas fa-phone-alt"></i>
-                    <h4>Teléfono</h4>
+                    <h4>Teléfono 1</h4>
                     <a href="tel:+5491160574170">+54 9 11 6057-4170</a>
                 </div>
 
                 <div class="contact-card reveal">
-                    <i class="fab fa-whatsapp"></i>
-                    <h4>WhatsApp</h4>
-                    <a href="https://wa.me/5491160574170" target="_blank">+54 9 11 6057-4170</a>
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Teléfono 2</h4>
+                    <a href="tel:+5491137662825">+54 9 11 3766-2825</a>
                 </div>
             </div>
         </div>
@@ -1232,7 +1159,7 @@
     ========================================== -->
     <footer class="footer">
         <div class="container">
-            <p>© <span id="year"></span> · Patricia Martín · Cocinera Profesional · 20 años de trayectoria</p>
+            <p>© <span id="year"></span> · Patricia Martín · Profesional gastronómica · 20 años de trayectoria</p>
         </div>
     </footer>
 
