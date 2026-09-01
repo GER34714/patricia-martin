@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patricia Martín | Servicios Gastronómicos Profesionales</title>
-    <meta name="description" content="Servicios gastronómicos profesionales a cargo de Patricia Martín. Especialista en cocina fría y caliente, producción, catering y eventos." />
+    <title>Patricia Martín · CV Interactivo | Cocinera Profesional</title>
+    <meta name="description" content="Curriculum vitae interactivo de Patricia Martín, cocinera profesional con 20 años de experiencia en cocina fría y caliente, producción y liderazgo de equipos." />
     <meta name="author" content="Patricia Martín" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Patricia Martín | Servicios Gastronómicos" />
-    <meta property="og:description" content="Servicios profesionales de cocina, producción y catering. 20 años de trayectoria." />
+    <meta property="og:title" content="Patricia Martín · CV Interactivo" />
+    <meta property="og:description" content="Cocinera profesional con 20 años de trayectoria. Especialista en cocina fría y caliente, producción y conducción de cocina." />
     <meta property="og:type" content="website" />
 
     <!-- Google Fonts -->
@@ -22,29 +22,31 @@
 
     <style>
         /* ============================================
-                   ROOT
+                   ROOT VARIABLES
                 ============================================ */
         :root {
-            --primary: #1f2a2a;
-            --primary-light: #2d3d3d;
-            --accent: #b8864b;
-            --accent-light: #d4a86a;
-            --gold: #c9a063;
+            --primary: #1a2e2a;
+            --primary-dark: #0f1f1c;
+            --primary-light: #2a4a42;
+            --accent: #b8863a;
+            --accent-light: #d4a85a;
+            --accent-pale: #f5ede3;
             --white: #ffffff;
-            --off-white: #f8f6f2;
+            --off-white: #faf8f5;
             --gray-100: #f0ede8;
             --gray-200: #e0dbd4;
-            --gray-600: #6b6560;
+            --gray-400: #b5ada4;
+            --gray-600: #7a7268;
             --gray-800: #3d3732;
-            --dark: #1a1613;
-            --shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
-            --shadow-hover: 0 16px 60px rgba(0, 0, 0, 0.12);
+            --dark: #1e1a16;
+            --shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 16px 50px rgba(0, 0, 0, 0.1);
             --radius: 14px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* ============================================
-                   RESET
+                   RESET & BASE
                 ============================================ */
         *,
         *::before,
@@ -71,13 +73,8 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
-            width: min(1180px, calc(100% - 48px));
+            width: min(1100px, calc(100% - 40px));
             margin: 0 auto;
         }
 
@@ -88,105 +85,40 @@
             display: inline-block;
             background: var(--accent);
             color: var(--white);
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 5px 18px;
+            padding: 5px 16px;
             border-radius: 50px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(30px, 4vw, 46px);
+            font-size: clamp(28px, 3.5vw, 40px);
             font-weight: 700;
             line-height: 1.1;
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
         .section-title span {
             color: var(--accent);
         }
 
-        .section-subtitle {
-            font-size: 17px;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin-top: 14px;
-        }
-
         .text-center {
             text-align: center;
         }
 
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(28px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* ============================================
-                   BUTTONS
-                ============================================ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 13px 32px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            min-height: 50px;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: #a0703e;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(184, 134, 75, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        .btn-white-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-white-outline:hover {
-            border-color: var(--accent);
-            background: rgba(184, 134, 75, 0.15);
-            transform: translateY(-3px);
         }
 
         /* ============================================
@@ -198,19 +130,14 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(31, 42, 42, 0.96);
+            background: rgba(15, 31, 28, 0.96);
             backdrop-filter: blur(14px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: var(--transition);
         }
 
-        .navbar.scrolled {
-            background: rgba(26, 22, 19, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        }
-
         .nav-inner {
-            height: 74px;
+            height: 68px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -221,40 +148,42 @@
             align-items: center;
             gap: 10px;
             color: var(--white);
-            font-weight: 800;
-            font-size: 18px;
-            letter-spacing: -0.3px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: -0.2px;
         }
 
         .brand-icon {
-            width: 40px;
-            height: 40px;
+            width: 34px;
+            height: 34px;
             background: var(--accent);
             border-radius: 50%;
             display: grid;
             place-items: center;
-            font-size: 18px;
+            font-size: 14px;
             color: var(--white);
             font-weight: 700;
         }
 
         .brand span {
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--accent-light);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 28px;
             list-style: none;
         }
 
         .nav-links a {
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
             font-weight: 600;
             transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .nav-links a:hover {
@@ -264,12 +193,13 @@
         .nav-cta {
             background: var(--accent);
             color: var(--white) !important;
-            padding: 9px 22px;
+            padding: 8px 20px;
             border-radius: 50px;
+            font-weight: 700;
         }
 
         .nav-cta:hover {
-            background: #a0703e;
+            background: #a07432;
         }
 
         .menu-toggle {
@@ -277,542 +207,522 @@
             background: none;
             border: none;
             color: var(--white);
-            font-size: 26px;
+            font-size: 24px;
             cursor: pointer;
         }
 
         /* ============================================
-                   HERO
+                   HEADER / HERO
                 ============================================ */
-        .hero {
-            min-height: 90vh;
+        .header {
+            min-height: 100vh;
             display: flex;
             align-items: center;
             background:
-                linear-gradient(135deg, rgba(26, 22, 19, 0.92) 0%, rgba(31, 42, 42, 0.8) 70%, rgba(26, 22, 19, 0.92) 100%),
-                radial-gradient(circle at 30% 40%, rgba(184, 134, 75, 0.08) 0%, transparent 60%);
+                linear-gradient(135deg, rgba(15, 31, 28, 0.94) 0%, rgba(26, 46, 42, 0.85) 60%, rgba(15, 31, 28, 0.95) 100%),
+                var(--primary-dark);
             color: var(--white);
-            padding-top: 74px;
+            padding-top: 68px;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
+        .header::before {
+            content: '👩‍🍳';
             position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            border: 1px solid rgba(184, 134, 75, 0.06);
-            bottom: -200px;
-            right: -150px;
+            font-size: 300px;
+            right: -60px;
+            bottom: -80px;
+            opacity: 0.04;
+            pointer-events: none;
         }
 
-        .hero-content {
+        .header-content {
             position: relative;
             z-index: 2;
-            max-width: 780px;
+            max-width: 760px;
         }
 
-        .hero-badge {
+        .header-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(184, 134, 75, 0.12);
-            border: 1px solid rgba(184, 134, 75, 0.2);
+            background: rgba(184, 134, 58, 0.12);
+            border: 1px solid rgba(184, 134, 58, 0.2);
             padding: 6px 18px 6px 14px;
-            border-radius: 50px;
-            font-size: 12px;
+            border-radius: 60px;
+            font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.5px;
             margin-bottom: 24px;
         }
 
-        .hero-badge i {
-            color: var(--accent);
+        .header-badge i {
+            color: var(--accent-light);
         }
 
-        .hero h1 {
+        .header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(42px, 6.5vw, 72px);
+            font-size: clamp(40px, 6vw, 70px);
             line-height: 1.02;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .hero h1 span {
-            color: var(--accent);
+        .header h1 span {
+            color: var(--accent-light);
         }
 
-        .hero p {
+        .header .subtitle {
             font-size: clamp(16px, 1.2vw, 20px);
             color: rgba(255, 255, 255, 0.75);
-            max-width: 580px;
-            margin-bottom: 32px;
+            max-width: 540px;
+            margin-bottom: 28px;
         }
 
-        .hero-buttons {
+        .header-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
 
-        .hero-stats {
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #a07432;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(184, 134, 58, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-light);
+            background: rgba(184, 134, 58, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .btn-small {
+            padding: 8px 18px;
+            font-size: 12px;
+            min-height: 38px;
+        }
+
+        .header-contact {
             display: flex;
-            gap: 40px;
-            margin-top: 48px;
-            padding-top: 36px;
+            gap: 28px;
+            margin-top: 36px;
+            padding-top: 28px;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        .hero-stats-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-stats-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        .hero-stats-label {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* ============================================
-                   ABOUT / PROPOSAL
-                ============================================ */
-        .proposal {
-            padding: 90px 0;
-            background: var(--white);
-        }
-
-        .proposal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .proposal-image {
-            border-radius: var(--radius);
-            background: var(--gray-100);
-            min-height: 340px;
-            display: grid;
-            place-items: center;
-            font-size: 80px;
-            color: var(--gray-600);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .proposal-image::after {
-            content: '👩‍🍳';
-            font-size: 100px;
-            opacity: 0.3;
-        }
-
-        .proposal-image-badge {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: var(--primary);
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 13px;
-        }
-
-        .proposal-text p {
-            color: var(--gray-600);
-            font-size: 16px;
-            margin-bottom: 18px;
-        }
-
-        .proposal-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-top: 24px;
-        }
-
-        .proposal-feature {
+        .header-contact a {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
         }
 
-        .proposal-feature i {
-            color: var(--accent);
+        .header-contact a:hover {
+            color: var(--white);
+        }
+
+        .header-contact i {
+            color: var(--accent-light);
             font-size: 16px;
         }
 
         /* ============================================
-                   SERVICES
+                   ABOUT / PERFIL
                 ============================================ */
-        .services {
-            padding: 90px 0;
+        .about {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text .section-badge {
+            margin-bottom: 10px;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(26px, 3vw, 36px);
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .about-text h2 span {
+            color: var(--accent);
+        }
+
+        .about-text p {
+            color: var(--gray-600);
+            font-size: 15px;
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .about-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .about-tag {
+            background: var(--accent-pale);
+            color: var(--primary-dark);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Sidebar info */
+        .about-sidebar {
+            background: var(--off-white);
+            border-radius: var(--radius);
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .about-sidebar h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 14px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row .label {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .info-row .value {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* ============================================
+                   EXPERIENCE
+                ============================================ */
+        .experience {
+            padding: 80px 0;
             background: var(--off-white);
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 44px;
+        .experience-timeline {
+            margin-top: 40px;
+            position: relative;
         }
 
-        .service-card {
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: var(--gray-200);
+        }
+
+        .exp-item {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--off-white);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2px;
+        }
+
+        .exp-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--primary-dark);
+        }
+
+        .exp-date {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(184, 134, 58, 0.08);
+            padding: 2px 14px;
+            border-radius: 50px;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: var(--gray-600);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .exp-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-item ul li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 4px;
+        }
+
+        .exp-item ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ============================================
+                   SKILLS
+                ============================================ */
+        .skills {
+            padding: 80px 0;
             background: var(--white);
-            padding: 34px 28px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .skill-item {
+            background: var(--off-white);
+            padding: 16px 22px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .skill-item i {
+            color: var(--accent);
+            font-size: 16px;
+            width: 20px;
+        }
+
+        .skill-item span {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+
+        /* ============================================
+                   EDUCATION
+                ============================================ */
+        .education {
+            padding: 80px 0;
+            background: var(--off-white);
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .edu-card {
+            background: var(--white);
+            padding: 28px 30px;
             border-radius: var(--radius);
             border: 1px solid var(--gray-200);
             transition: var(--transition);
-            text-align: center;
         }
 
-        .service-card:hover {
-            transform: translateY(-6px);
+        .edu-card:hover {
             box-shadow: var(--shadow-hover);
             border-color: var(--accent);
         }
 
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(184, 134, 75, 0.1);
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            font-size: 24px;
-            color: var(--accent);
-            margin: 0 auto 18px;
-        }
-
-        .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .service-card p {
-            color: var(--gray-600);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* ============================================
-                   CLIENTS / PARTNERS
-                ============================================ */
-        .clients {
-            padding: 70px 0;
-            background: var(--white);
-            border-top: 1px solid var(--gray-200);
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .clients-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px 60px;
-            margin-top: 30px;
-        }
-
-        .client-item {
-            font-weight: 700;
-            font-size: 14px;
-            color: var(--gray-600);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            opacity: 0.5;
-            transition: var(--transition);
-        }
-
-        .client-item:hover {
-            opacity: 1;
-            color: var(--primary);
-        }
-
-        .client-item i {
-            margin-right: 8px;
-            color: var(--accent);
-        }
-
-        /* ============================================
-                   TESTIMONIALS (simplified)
-                ============================================ */
-        .testimonials {
-            padding: 80px 0;
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .testimonials .section-title {
-            color: var(--white);
-        }
-
-        .testimonials .section-subtitle {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.06);
-            padding: 28px 30px;
-            border-radius: var(--radius);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .testimonial-card blockquote {
-            font-size: 15px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.8);
-            font-style: italic;
-            margin-bottom: 14px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .testimonial-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            font-size: 14px;
-            color: var(--white);
-        }
-
-        .testimonial-author strong {
-            display: block;
-            font-size: 14px;
-        }
-
-        .testimonial-author span {
+        .edu-card .year {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* ============================================
-                   CTA
-                ============================================ */
-        .cta-section {
-            padding: 70px 0;
-            background: var(--off-white);
-            text-align: center;
-        }
-
-        .cta-section h2 {
+        .edu-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 3.5vw, 40px);
-            color: var(--primary);
-            margin-bottom: 14px;
+            font-size: 18px;
+            color: var(--primary-dark);
+            margin: 4px 0 2px;
         }
 
-        .cta-section p {
+        .edu-card .institution {
+            font-size: 13px;
             color: var(--gray-600);
-            max-width: 500px;
-            margin: 0 auto 28px;
-            font-size: 16px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
+            font-weight: 500;
         }
 
         /* ============================================
                    CONTACT
                 ============================================ */
-        .contact {
+        .contact-section {
             padding: 80px 0;
-            background: var(--white);
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .contact-section .section-title {
+            color: var(--white);
+        }
+
+        .contact-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 10px;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             margin-top: 40px;
         }
 
-        .contact-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .contact-info p {
-            color: var(--gray-600);
-            margin-bottom: 28px;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .contact-detail i {
-            width: 36px;
-            height: 36px;
-            background: rgba(184, 134, 75, 0.1);
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .contact-detail strong {
-            display: block;
-            font-size: 13px;
-            color: var(--primary);
-        }
-
-        .contact-detail span {
-            font-size: 13px;
-            color: var(--gray-600);
-        }
-
-        .contact-form {
-            background: var(--off-white);
-            padding: 36px 38px;
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: var(--radius);
-            border: 1px solid var(--gray-200);
-        }
-
-        .contact-form label {
-            display: block;
-            font-weight: 600;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-            color: var(--gray-800);
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 14px;
-            background: var(--white);
+            padding: 28px 24px;
+            text-align: center;
             transition: var(--transition);
-            margin-bottom: 16px;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(184, 134, 75, 0.1);
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
         }
 
-        .contact-form textarea {
-            min-height: 110px;
-            resize: vertical;
+        .contact-card i {
+            font-size: 28px;
+            color: var(--accent-light);
+            margin-bottom: 10px;
         }
 
-        .contact-form .btn {
-            width: 100%;
-            justify-content: center;
+        .contact-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .contact-card a,
+        .contact-card span {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
+        }
+
+        .contact-card a:hover {
+            color: var(--white);
         }
 
         /* ============================================
                    FOOTER
                 ============================================ */
         .footer {
-            background: var(--dark);
-            color: rgba(255, 255, 255, 0.5);
-            padding: 40px 0 24px;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--white);
-        }
-
-        .footer-brand span {
-            color: var(--accent);
-        }
-
-        .footer p {
+            background: #0d1815;
+            color: rgba(255, 255, 255, 0.4);
+            padding: 24px 0;
+            text-align: center;
             font-size: 13px;
         }
 
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
-
-        .footer-social a {
-            width: 38px;
-            height: 38px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            transition: var(--transition);
-            font-size: 14px;
-        }
-
-        .footer-social a:hover {
-            border-color: var(--accent);
-            background: var(--accent);
-            color: var(--white);
+        .footer span {
+            color: var(--accent-light);
         }
 
         /* ============================================
-                   WHATSAPP FLOAT
+                   WHATSAPP FLOATING
                 ============================================ */
         .whatsapp-float {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
+            bottom: 22px;
+            right: 22px;
+            width: 54px;
+            height: 54px;
             background: #25d366;
             border-radius: 50%;
             display: grid;
@@ -820,23 +730,32 @@
             color: var(--white);
             font-size: 28px;
             z-index: 999;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3);
             transition: var(--transition);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
 
         /* ============================================
                    RESPONSIVE
                 ============================================ */
-        @media (max-width: 1024px) {
+        @media (max-width: 968px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .testimonials-grid {
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -845,10 +764,10 @@
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 74px;
+                top: 68px;
                 left: 0;
                 width: 100%;
-                background: var(--primary);
+                background: var(--primary-dark);
                 padding: 20px 24px;
                 flex-direction: column;
                 gap: 8px;
@@ -873,73 +792,59 @@
                 display: block;
             }
 
-            .proposal-grid {
+            .header-contact {
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .skills-grid {
                 grid-template-columns: 1fr;
-                gap: 32px;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 32px;
             }
 
-            .hero-stats {
-                gap: 24px;
-                flex-wrap: wrap;
+            .experience-timeline::before {
+                left: 2px;
             }
 
-            .proposal-features {
-                grid-template-columns: 1fr;
+            .exp-item {
+                padding-left: 22px;
             }
 
-            .footer-inner {
+            .exp-item::before {
+                left: -3px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .exp-header {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .contact-form {
-                padding: 24px;
-            }
-
-            .clients-grid {
-                gap: 20px 30px;
-            }
-
-            .client-item {
-                font-size: 12px;
+                align-items: flex-start;
             }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
+            .header h1 {
                 font-size: 34px;
             }
 
-            .hero-buttons .btn {
+            .header-buttons .btn {
                 width: 100%;
                 justify-content: center;
             }
 
-            .hero-stats {
-                flex-direction: column;
-                gap: 10px;
+            .about-sidebar {
+                padding: 20px;
             }
 
-            .btn {
-                padding: 11px 24px;
-                font-size: 13px;
-            }
-
-            .container {
-                width: calc(100% - 24px);
+            .contact-card {
+                padding: 20px 16px;
             }
         }
     </style>
@@ -961,98 +866,129 @@
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#trayectoria">Trayectoria</a></li>
-                <li><a href="#testimonios">Referencias</a></li>
-                <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto" class="nav-cta">Contacto</a></li>
             </ul>
         </div>
     </header>
 
     <!-- ==========================================
-    HERO
+    HEADER / HERO
     ========================================== -->
-    <section class="hero" id="inicio">
+    <section class="header" id="inicio">
         <div class="container">
-            <div class="hero-content reveal">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i>
-                    Servicios gastronómicos profesionales
+            <div class="header-content reveal">
+                <div class="header-badge">
+                    <i class="fas fa-utensil-spoon"></i>
+                    Cocinera Profesional · 20 años de trayectoria
                 </div>
 
                 <h1>
-                    Patricia <span>Martín</span>
+                    Patricia <br /><span>Martín</span>
                 </h1>
 
-                <p>
-                    Servicios profesionales de cocina, producción y catering.
-                    20 años de trayectoria en cocina fría y caliente,
-                    liderazgo de equipos y eventos de alta exigencia.
+                <p class="subtitle">
+                    Especialista en cocina fría y caliente, producción, liderazgo de equipos,
+                    catering y eventos. Apasionada por la gastronomía y la excelencia en el servicio.
                 </p>
 
-                <div class="hero-buttons">
+                <div class="header-buttons">
                     <a href="#contacto" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Solicitar propuesta
+                        <i class="fas fa-envelope"></i> Contactar
                     </a>
-                    <a href="#servicios" class="btn btn-white-outline">
-                        <i class="fas fa-chevron-right"></i> Ver servicios
+                    <a href="https://wa.me/5491160574170" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#experiencia" class="btn btn-outline btn-small">
+                        <i class="fas fa-chevron-down"></i> Ver trayectoria
                     </a>
                 </div>
 
-                <div class="hero-stats">
-                    <div class="hero-stats-item">
-                        <span class="hero-stats-number">20</span>
-                        <span class="hero-stats-label">Años de trayectoria</span>
-                    </div>
-                    <div class="hero-stats-item">
-                        <span class="hero-stats-number">+9</span>
-                        <span class="hero-stats-label">Empresas y establecimientos</span>
-                    </div>
-                    <div class="hero-stats-item">
-                        <span class="hero-stats-number">+</span>
-                        <span class="hero-stats-label">Eventos de gran escala</span>
-                    </div>
+                <div class="header-contact">
+                    <a href="mailto:patricia125369@gmail.com">
+                        <i class="fas fa-envelope"></i> patricia125369@gmail.com
+                    </a>
+                    <a href="tel:+5491160574170">
+                        <i class="fas fa-phone"></i> +54 9 11 6057-4170
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-map-marker-alt"></i> Belén de Escobar, Buenos Aires
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================
-    PROPOSAL / ABOUT
+    ABOUT / PERFIL
     ========================================== -->
-    <section class="proposal" id="trayectoria">
+    <section class="about" id="perfil">
         <div class="container">
-            <div class="proposal-grid">
-                <div class="proposal-image reveal">
-                    <div class="proposal-image-badge">
-                        <i class="fas fa-check-circle"></i> 20 años de experiencia
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <span class="section-badge">Perfil profesional</span>
+                    <h2>Experiencia, <span>organización</span> y pasión</h2>
+
+                    <p>
+                        Cocinera con sólida experiencia en cocina fría y caliente,
+                        manejo eficiente de stock, liderazgo de equipos y cumplimiento
+                        estricto de normas de higiene y seguridad alimentaria.
+                    </p>
+
+                    <p>
+                        Participé en eventos gastronómicos de distintas escalas y
+                        jornadas prolongadas, siempre destacando por el compromiso,
+                        la organización y la pasión por la gastronomía.
+                    </p>
+
+                    <p>
+                        Mi objetivo es seguir capacitándome, incorporando nuevas
+                        técnicas y estilos de cocina, para brindar un servicio de excelencia.
+                    </p>
+
+                    <div class="about-tags">
+                        <span class="about-tag">Encargada de cocina</span>
+                        <span class="about-tag">Producción</span>
+                        <span class="about-tag">Liderazgo</span>
+                        <span class="about-tag">Catering</span>
+                        <span class="about-tag">Eventos</span>
+                        <span class="about-tag">Hoteles</span>
                     </div>
                 </div>
 
-                <div class="proposal-text reveal">
-                    <span class="section-badge">Trayectoria</span>
-                    <h2 class="section-title">
-                        Experiencia que <span>genera confianza</span>
-                    </h2>
+                <div class="about-sidebar reveal">
+                    <h4>Datos personales</h4>
 
-                    <p>
-                        A lo largo de mi carrera he trabajado en cocinas profesionales,
-                        catering, establecimientos gastronómicos y eventos de distintas
-                        escalas. Mi enfoque está en la <strong>calidad</strong>, la
-                        <strong>organización</strong> y el <strong>compromiso</strong>
-                        con cada servicio.
-                    </p>
-
-                    <p>
-                        Ofrezco soluciones gastronómicas adaptadas a las necesidades
-                        de cada cliente, garantizando excelencia en cada detalle.
-                    </p>
-
-                    <div class="proposal-features">
-                        <span class="proposal-feature"><i class="fas fa-check-circle"></i> Cocina fría y caliente</span>
-                        <span class="proposal-feature"><i class="fas fa-check-circle"></i> Producción y logística</span>
-                        <span class="proposal-feature"><i class="fas fa-check-circle"></i> Liderazgo de equipos</span>
-                        <span class="proposal-feature"><i class="fas fa-check-circle"></i> Eventos y catering</span>
+                    <div class="info-row">
+                        <span class="label">Nombre</span>
+                        <span class="value">Patricia Martín</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Profesión</span>
+                        <span class="value">Cocinera Profesional</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Experiencia</span>
+                        <span class="value">20 años</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Ubicación</span>
+                        <span class="value">Belén de Escobar, BA</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Disponibilidad</span>
+                        <span class="value">Inmediata</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Email</span>
+                        <span class="value" style="font-size:12px;">patricia125369@gmail.com</span>
+                    </div>
+                    <div class="info-row" style="border-bottom: none;">
+                        <span class="label">Teléfono</span>
+                        <span class="value">+54 9 11 6057-4170</span>
                     </div>
                 </div>
             </div>
@@ -1060,61 +996,312 @@
     </section>
 
     <!-- ==========================================
-    SERVICES
+    EXPERIENCE
     ========================================== -->
-    <section class="services" id="servicios">
+    <section class="experience" id="experiencia">
         <div class="container">
             <div class="text-center reveal">
-                <span class="section-badge">Servicios</span>
-                <h2 class="section-title">Soluciones <span>gastronómicas</span></h2>
+                <span class="section-badge">Trayectoria</span>
+                <h2 class="section-title">Experiencia <span>profesional</span></h2>
+                <p class="section-subtitle mx-auto" style="max-width:580px;">
+                    Una carrera construida en cocinas profesionales, catering, hoteles y eventos de distintas escalas.
+                </p>
+            </div>
+
+            <div class="experience-timeline">
+
+                <!-- Item 1 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera encargada</h3>
+                        <span class="exp-date">2025 · Actualidad</span>
+                    </div>
+                    <div class="exp-company">Avant Catering · Licitación Mercado Libre</div>
+                    <ul>
+                        <li>Cálculo de cantidades según tipo de evento o servicio.</li>
+                        <li>Porcionado estandarizado para control de costos.</li>
+                        <li>Clasificación y almacenamiento por tipo de producto.</li>
+                    </ul>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera</h3>
+                        <span class="exp-date">2024 · 2025</span>
+                    </div>
+                    <div class="exp-company">Art Catering</div>
+                    <ul>
+                        <li>Preparación de grandes volúmenes sin perder calidad ni presentación.</li>
+                        <li>Planificación de producción por etapas.</li>
+                        <li>Organización de estaciones de trabajo para despacho ágil.</li>
+                    </ul>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera</h3>
+                        <span class="exp-date">2023 · 2024</span>
+                    </div>
+                    <div class="exp-company">Nomade Resto · Campo Argentino de Polo</div>
+                    <ul>
+                        <li>Control preciso de puntos de cocción de carnes, pescados y pastas.</li>
+                        <li>Cortes profesionales: brunoise, juliana, mirepoix, chiffonade.</li>
+                        <li>Elaboración de fondos, reducciones, glaseados y salsas madre.</li>
+                    </ul>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera</h3>
+                        <span class="exp-date">2022 · 2023</span>
+                    </div>
+                    <div class="exp-company">Barrios cerrados · Haras Santa María y Miraflores</div>
+                    <ul>
+                        <li>Corte, picado, fileteado y porcionado de carnes y verduras.</li>
+                        <li>Preparación de masas, rellenos, mezclas y bases.</li>
+                        <li>Porcionado y etiquetado de productos para producción futura.</li>
+                    </ul>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Cocinera encargada</h3>
+                        <span class="exp-date">2015 · 2018</span>
+                    </div>
+                    <div class="exp-company">Chips Café / Café Boccazzi</div>
+                    <ul>
+                        <li>Asignación de tareas al personal de cocina.</li>
+                        <li>Capacitación del equipo en técnicas, recetas y normas de higiene.</li>
+                        <li>Supervisión del ritmo de trabajo para cumplir horarios de servicio.</li>
+                    </ul>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="exp-item reveal">
+                    <div class="exp-header">
+                        <h3>Jefa de sector cóctel frío y degustación</h3>
+                        <span class="exp-date">2005 · 2013</span>
+                    </div>
+                    <div class="exp-company">Eat Catering</div>
+                    <ul>
+                        <li>Elaboración y supervisión de canapés, bocaditos fríos, tablas y degustaciones.</li>
+                        <li>Verificación del cumplimiento de recetas y estándares de la empresa.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+    SKILLS
+    ========================================== -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-badge">Competencias</span>
+                <h2 class="section-title">Habilidades <span>profesionales</span></h2>
+                <p class="section-subtitle mx-auto" style="max-width:560px;">
+                    Competencias desarrolladas a lo largo de dos décadas en cocinas profesionales.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Producción constante bajo presión</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Adaptación rápida a cambios y urgencias</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Grandes volúmenes sin perder calidad</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Rapidez y precisión en alta demanda</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Liderazgo y coordinación de equipos</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Higiene y seguridad alimentaria</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+    EDUCATION
+    ========================================== -->
+    <section class="education" id="formacion">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-badge">Formación</span>
+                <h2 class="section-title">Capacitación <span>profesional</span></h2>
+                <p class="section-subtitle mx-auto" style="max-width:500px;">
+                    Formación continua para mantenerse actualizada en técnicas y tendencias gastronómicas.
+                </p>
+            </div>
+
+            <div class="edu-grid">
+                <div class="edu-card reveal">
+                    <div class="year">2020</div>
+                    <h4>Curso de Cocina de Vanguardia</h4>
+                    <div class="institution">Instituto Gastronómico Argentino</div>
+                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
+                        Técnicas avanzadas de cocina y presentación.
+                    </p>
+                </div>
+
+                <div class="edu-card reveal">
+                    <div class="year">2015</div>
+                    <h4>Gestión de Equipos en Cocina</h4>
+                    <div class="institution">Centro de Formación Profesional</div>
+                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
+                        Liderazgo, comunicación y organización en cocinas profesionales.
+                    </p>
+                </div>
+
+                <div class="edu-card reveal">
+                    <div class="year">2010</div>
+                    <h4>Curso de Manipulación de Alimentos</h4>
+                    <div class="institution">Instituto de Seguridad Alimentaria</div>
+                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
+                        Normas de higiene y seguridad alimentaria.
+                    </p>
+                </div>
+
+                <div class="edu-card reveal">
+                    <div class="year">2005</div>
+                    <h4>Cocinera Profesional</h4>
+                    <div class="institution">Escuela de Gastronomía Gato Dumas</div>
+                    <p style="font-size:13px; color:var(--gray-600); margin-top:4px;">
+                        Formación integral en cocina profesional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+    CONTACT
+    ========================================== -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-badge" style="background: var(--accent-light); color: var(--primary-dark);">Contacto</span>
+                <h2 class="section-title">Hablemos de tu <span>proyecto</span></h2>
                 <p class="section-subtitle mx-auto">
-                    Servicios profesionales adaptados a las necesidades de
-                    restaurantes, hoteles, catering y eventos.
+                    Para oportunidades laborales, propuestas gastronómicas o servicios de cocina.
                 </p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Producción de Cocina</h3>
-                    <p>
-                        Planificación y ejecución de producción diaria, control de
-                        stock, mise en place y grandes volúmenes.
-                    </p>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:patricia125369@gmail.com">patricia125369@gmail.com</a>
                 </div>
 
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-users-cog"></i></div>
-                    <h3>Liderazgo de Equipos</h3>
-                    <p>
-                        Coordinación y supervisión de equipos de cocina, capacitación
-                        y optimización de procesos.
-                    </p>
+                <div class="contact-card reveal">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Teléfono</h4>
+                    <a href="tel:+5491160574170">+54 9 11 6057-4170</a>
                 </div>
 
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Eventos y Catering</h3>
-                    <p>
-                        Servicios para eventos corporativos, sociales y gastronómicos
-                        de distintas escalas.
-                    </p>
+                <div class="contact-card reveal">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/5491160574170" target="_blank">+54 9 11 6057-4170</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================
-    CLIENTS / PARTNERS
+    FOOTER
     ========================================== -->
-    <section class="clients">
+    <footer class="footer">
         <div class="container">
-            <div class="text-center reveal">
-                <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gray-600); font-weight: 700;">
-                    He trabajado con
-                </p>
-            </div>
+            <p>© <span id="year"></span> · Patricia Martín · Cocinera Profesional · 20 años de trayectoria</p>
+        </div>
+    </footer>
 
-            <div class="clients-grid">
-                <span class="client-item"><i class="fas fa-building"></i> Avant Catering</span>
-                <span class="client-item"><i class="fas fa-building"></
+    <!-- ==========================================
+    WHATSAPP FLOATING
+    ========================================== -->
+    <a class="whatsapp-float" href="https://wa.me/5491160574170" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================
+    SCRIPTS
+    ========================================== -->
+    <script>
+        // =========================
+        // MOBILE MENU
+        // =========================
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // =========================
+        // YEAR
+        // =========================
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // =========================
+        // SCROLL REVEAL
+        // =========================
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -30px 0px'
+            }
+        );
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // =========================
+        // NAVBAR SCROLL EFFECT
+        // =========================
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
